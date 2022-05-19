@@ -1,0 +1,7 @@
+tittle:
+To jest pytanie?
+answers:
+tak
+nie
+xd
+es

@@ -1,0 +1,7 @@
+tittle: 
+Jakie kolory ma zebra?
+answers: 
+Czarny i Różowy
+Biały i Zielony
+Czarny i Biały
+Niebieski i Czarny
