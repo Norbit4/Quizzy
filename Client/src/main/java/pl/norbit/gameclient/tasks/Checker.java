@@ -15,9 +15,7 @@ public class Checker implements Runnable {
 
     @Override
     public void run() {
-        int i=0;
         boolean c = true;
-
         while (c) {
 
             try {

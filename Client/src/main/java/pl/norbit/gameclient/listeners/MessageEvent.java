@@ -13,7 +13,6 @@ import pl.norbit.gameclient.game.panels.QuizPanel;
 import pl.norbit.gameclient.game.GameInfo;
 import pl.norbit.gameclient.objects.Question;
 import pl.norbit.gameclient.packets.GamePacket;
-import pl.norbit.gameclient.utils.GameUtil;
 import pl.norbit.server.objects.ObjectPacket;
 import pl.norbit.server.objects.Packets;
 

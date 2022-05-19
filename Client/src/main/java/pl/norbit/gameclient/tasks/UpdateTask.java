@@ -13,12 +13,13 @@ public class UpdateTask implements Runnable{
 
     @Override
     public void run() {
-
-        while (true) {
+        boolean c = true;
+        while (c) {
             try {
                 Thread.sleep(1000/60);
             } catch (InterruptedException e) {
                 e.printStackTrace();
+                c = false;
             }
             gameFrame.revalidate();
             gameFrame.repaint();
