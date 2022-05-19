@@ -1,1 +1,2 @@
 # Quizzy
+Multiplayer quiz game
