@@ -1,5 +1,10 @@
 # Quizzy
-🎮 Multiplayer quiz game
+🎮 Quizzy is a multiplayer quiz game. 
+You can create your own room and play with the friends. Have Fun!
 
-📁Download:
-https://drive.google.com/file/d/1Rp_CjrW2T7bvkx86ROytXRczLyKxQUYd/view?usp=sharing
+📁Download and play!
+https://drive.google.com/drive/folders/1pR1r3uRQK1uuJwI_Y1-6bzH_OOsrvyOL?usp=sharing
+
+📚Lib used:
+- https://github.com/Norbit4/Multi-PlayerLib
+- https://github.com/google/gson
