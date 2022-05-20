@@ -108,5 +108,6 @@ public class GamePlayer {
 
     public void setPoints(int points) {
         this.points = points;
+        playerPacket.setPoints(points);
     }
 }

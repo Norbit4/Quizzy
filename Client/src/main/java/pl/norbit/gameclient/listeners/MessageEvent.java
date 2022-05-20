@@ -102,12 +102,13 @@ public class MessageEvent implements OnMessageReceiveClient {
 
             ObjectPacket objectPacket = (ObjectPacket) packets;
 
-            String winner = (String) objectPacket.getObject();
+            String gamePacketString = (String) objectPacket.getObject();
 
-            GamePacket.PlayerPacket playerPacket = gson.fromJson(winner, GamePacket.PlayerPacket.class);
+            GamePacket gamePacket = gson.fromJson(gamePacketString, GamePacket.class);
 
-            gameFrame.updatePanel(new EndGamePanel(gameFrame,gameClient,
-                    playerPacket.getPlayerUUUD(), playerPacket.getPlayerName()));
+            gamePacket.getPlayers().forEach(playerPacket ->
+                    System.out.println(playerPacket.getPoints() + " " + playerPacket.getPlayerName()));
+            gameFrame.updatePanel(new EndGamePanel(gameFrame, gameClient, gamePacket));
 
         }else if(channel.equals(Channel.UPDATE_LOBBY.name())) {
 

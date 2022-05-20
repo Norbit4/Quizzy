@@ -9,7 +9,7 @@ public class GamePacket {
     private final ArrayList<PlayerPacket> players;
     private String token;
     private PlayerPacket owner;
-    private int size, amountQuests;
+    private int size, amountQuests, points;
 
     //player class
     public static class PlayerPacket implements Serializable {
@@ -20,6 +20,10 @@ public class GamePacket {
         public PlayerPacket(UUID playerUUUD) {
             this.playerUUUD = playerUUUD;
             this.points = 0;
+        }
+
+        public void setPoints(int points) {
+            this.points = points;
         }
 
         public String getPlayerName() {
@@ -50,10 +54,8 @@ public class GamePacket {
     public GamePacket(String token) {
         this.players = new ArrayList<>();
         this.token = token;
-    }
+        this.points = 0;
 
-    public ArrayList<PlayerPacket> getPlayers() {
-        return players;
     }
 
     public String getToken() {
@@ -94,5 +96,9 @@ public class GamePacket {
 
     public void setToken(String token) {
         this.token = token;
+    }
+
+    public ArrayList<PlayerPacket> getPlayers() {
+        return players;
     }
 }

@@ -22,6 +22,10 @@ public class GamePacket {
             this.points = 0;
         }
 
+        public void setPoints(int points) {
+            this.points = points;
+        }
+
         public String getPlayerName() {
             return playerName;
         }

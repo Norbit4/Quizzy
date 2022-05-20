@@ -20,7 +20,7 @@ public class GameRoomTask implements Runnable {
     }
 
     public GameRoomTask(GameRoom gameRoom) {
-        this.i = 29;
+        this.i = 10;
         this.gameRoom = gameRoom;
         this.c = true;
     }
@@ -64,7 +64,7 @@ public class GameRoomTask implements Runnable {
     public void sendTimer(int timer){
         gameRoom.getGamePlayerList().forEach(gamePlayer -> {
 
-            System.out.println(gamePlayer.getPlayerName());
+            //System.out.println(gamePlayer.getPlayerName());
 
             ConnectedClient connectedClient  = (ConnectedClient) gamePlayer.getServerClient();
 

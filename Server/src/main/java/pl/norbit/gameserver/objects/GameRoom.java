@@ -35,7 +35,7 @@ public class GameRoom {
         this.size = 4;
         this.token = GameToken.generate();
         this.clientsReady = 0;
-        this.amountQuests = 3;
+        this.amountQuests = 1;
 
         owner.setGameRoom(this);
         gameRoomList.add(this);
@@ -158,7 +158,7 @@ public class GameRoom {
 
                 ConnectedClient connectedClient = (ConnectedClient) gamePlayer.getServerClient();
 
-                String jsonStringFromObject = gson.toJson(gamePlayer.getPlayerPacket());
+                String jsonStringFromObject = gson.toJson(gamePlayer.getGameRoom().getGamePacket());
 
                 ObjectPacket objectPacket = new ObjectPacket(Channel.END_GAME.name(), jsonStringFromObject);
 
@@ -179,11 +179,12 @@ public class GameRoom {
         getGamePlayerList().forEach(gamePlayer1 -> {
             ConnectedClient connectedClient = (ConnectedClient) gamePlayer1.getServerClient();
 
-            String jsonStringFromObject = gson.toJson(gamePlayer.getPlayerPacket());
+            String jsonStringFromObject = gson.toJson(gamePlayer1.getGameRoom().getGamePacket());
 
             ObjectPacket objectPacket = new ObjectPacket(Channel.END_GAME.name(), jsonStringFromObject);
 
             connectedClient.sendObject(objectPacket);
+            System.out.println("sending to" + gamePlayer1.getPlayerName() + "" + gamePlayer1.getPoints());
         });
     }
 

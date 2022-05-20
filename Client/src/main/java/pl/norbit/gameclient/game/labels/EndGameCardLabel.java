@@ -13,9 +13,8 @@ public class EndGameCardLabel extends JLabel{
         this.setForeground(GameUtil.BUTTON_FOREGROUND);
         this.setSize(endGameInfo.getWidth(), 100);
         this.setFont(new Font("Arial", Font.BOLD,30));
-        this.setLocation(0,250);
         this.setHorizontalAlignment(SwingConstants.CENTER);
-        this.setText( "#" + playerPlace + " " + playerNick + " " + points);
+        this.setText("#" + playerPlace + " " + playerNick + " - " + points);
         playerPlace++;
     }
 
